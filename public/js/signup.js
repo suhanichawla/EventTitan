@@ -2,10 +2,12 @@ var submit=document.getElementById("subbut")
 submit.addEventListener("click",()=>{
     var username=document.getElementsByName("username")[0].value
     var password=document.getElementsByName("password")[0].value
-    var res=fetch('/api/auth/signin',{
+    var email=document.getElementsByName("email")[0].value
+    var res=fetch('/api/auth/signup',{
         method:"POST",
         headers: { "Content-Type": "application/json" },
         body:JSON.stringify({
+            email,
             username,
             password
         })
@@ -17,8 +19,15 @@ submit.addEventListener("click",()=>{
         return res.text();
     })
     pr.then((response)=>{
-        var id=JSON.parse(response).id;
-        localStorage.setItem("id",id)
-        window.location.replace("/loggedin.html");
+        if(response){
+        document.getElementById("my-form").reset();
+        var p=document.createElement("p");
+        var text=document.createTextNode("Congratulations you have succesfully registered!")
+        p.append(text);
+        document.getElementById("success").append(p)
+        setTimeout(() => {
+            p.innerHTML=""
+        }, 5000);
+        }
     });
 })

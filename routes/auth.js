@@ -6,11 +6,13 @@ signin=async function(req,res,next){
     try{
         let {username,password}=req.body;
         let user=await db.User.findOne({username:username})
+        let email=user.email
         let isMatch=await user.comparePassword(password)
        if(isMatch){
             return res.status(200).json({
                 id:user.id,
                 username:user.username,
+                email:email,
                 profilePic:user.profilePic,
             })
        }else{
@@ -22,7 +24,7 @@ signin=async function(req,res,next){
     }catch(err){
         return next({
             status:400,
-            message:"Incorrect username or password"
+            message:err.message
         })
     }
 }

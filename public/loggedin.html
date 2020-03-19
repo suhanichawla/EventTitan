@@ -3,44 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-        }
-        div{
-            height: 100vh;
-            display: inline-block;
-            width: 33%;
-        }
-        #one{
-          background-color:green;  
-        }
-        #two{
-            background-color:orange;
-        }
-        #three{
-            background-color:pink;
-        }
-        .after-disp{
-            display: inline-block;
-        }
-        .no-disp{
-            display: none;
-        }
-        
-    </style>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/loggedin.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Bree+Serif&display=swap" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li id="addEvent"><a>add an event</a></li>
-            <li id="logout"><a>Logout</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="./img/laptop.svg" width="40" height="40" class="d-inline-block align-top" alt="">
+            EventTitan
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li  id="addEvent" class="nav-item active">
+              <a class="nav-link" href="#">Add an Event<span class="sr-only">(current)</span></a>
+            </li>
+            <li id="logout" class="nav-item active ">
+              <a class="nav-link " href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
     <div id="disp" class="no-disp">
-        <form>
+        <div id="close">X</div>
+        <form id="my-form">
             <label for="name">Event Name:</label>
             <input class="form-control" id="name" name="name" type="text" value="">
             <label for="text">Event Description:</label>
@@ -53,17 +49,24 @@
             <input class="form-control" id="date" name="date" type="date" value="">
             <label for="starttime">Start Time:</label>
             <input class="form-control" id="starttime" name="starttime" type="text">
+            <div class="form-group">
             <label for="endtime">End Time:</label>
             <input class="form-control" id="endtime" name="endtime" type="text">
+            </div>
             <button class="btn btn-primary btn-block btn-lg" type="button" id="subbut">ADD MY EVENT</button>
         </form>
     </div>
-    <!-- <div id="one">
-    </div><div id="two">b
-
-    </div><div id="three"> -->
-
+</div>
+<div id="mainpage">
+<div id="one">
+    <img id="default-img" src="./img/people.png">
+    <div id="userinfo">
     </div>
-    <script src="loggedin.js"></script>
+</div><div id="two" class="container">
+        <ul id="eventlist"></ul>
+    </div>
+</div>
+
+    <script src="./js/loggedin.js"></script>
 </body>
 </html>

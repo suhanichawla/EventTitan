@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    font-family: 'Baloo Chettan 2', cursive !important;
+}
+h1,h3,.card-header,.card-footer,.navbar-brand{
+    font-family: 'Bree Serif', serif;
+}
+#disp{
+    width: 50%;
+    text-align: center;
+    margin-top: 15px;
+    box-sizing: border-box;
+    border:2px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+#one{
+  background-color:#E8E8E8;  
+  width: 30%;
+  min-height: 100vh;
+  display: inline-block;
+  text-align: center;
+}
+#two{
+    background-color:#F5F5F5;
+    width:70%;
+    min-height: 100vh;
+    display: inline-block;
+    text-align: center;
+}
+.after-disp{
+    display: inline-block;
+}
+#close{
+    color: red;
+    text-align: right;
+    cursor: pointer;
+}
+.card-header {
+    font-size: 25px;
+}
+.card-footer:last-child {
+    font-size: 25px;
+}
+#userinfo{
+    font-size: 25px;
+}
+.closed{
+    color: red;
+    text-align: right;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.no-disp{
+    display: none;
+}
+#navbarNav{
+    float: left;
+}
+.container{
+    text-align: center;
+}
+#eventlist{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+#eventlist li{
+    width: 50%;
+}
+#mainpage{
+    display: flex;
+    text-align: center;
+}
+form{
+    margin-bottom: 20px;
+}
+#default-img{
+    height: 200px;
+    margin-top: 20px;
+}
+@media screen and (min-width: 900px){
+    .navbar-dark{
+        height: 15vh;
+    }
+    .nav-link{
+        font-size: 20px;
+    }
+    .navbar-brand{
+        font-size: 30px !important;
+    }
+   
+}
+@media screen and (max-width: 600px){
+    #eventlist li{
+    width: 100%;
+    }
+    #userinfo{
+    font-size: 20px;
+    color:darkblue;
+    }
+}

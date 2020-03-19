@@ -1,0 +1,21 @@
+#navbarNav{
+    float: left;
+}
+body{
+    margin: 0;
+    font-family: 'Baloo Chettan 2', cursive !important;
+}
+h1,h2,h3,.card-header,.card-footer,header,footer,.navbar-brand{
+    font-family: 'Bree Serif', serif;
+}
+@media screen and (min-width: 900px){
+    .navbar-dark{
+        height: 15vh;
+    }
+    .nav-link{
+        font-size: 20px;
+    }
+    .navbar-brand{
+        font-size: 30px !important;
+    }
+}

@@ -3,6 +3,12 @@ ul{
     list-style-type:none;
 
 }
+body{
+    font-family: 'Baloo Chettan 2', cursive !important;
+}
+h1,h3,.card-header,.card-footer,.navbar-brand{
+    font-family: 'Bree Serif', serif;
+}
 
 li{
     list-style-type:none;
@@ -40,4 +46,25 @@ li{
         text-align: center;
     }
     
+}
+
+#navbarNav{
+    float: left;
+}
+.card-header:first-child {
+    font-size: 25px;
+}
+.card-footer:last-child {
+    font-size: 25px;
+}
+@media screen and (min-width: 900px){
+    .navbar-dark{
+        height: 15vh;
+    }
+    .nav-link{
+        font-size: 20px;
+    }
+    .navbar-brand{
+        font-size: 30px !important;
+    }
 }

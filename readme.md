@@ -1,4 +1,4 @@
-# Let's Get Wasted
+# EventTitan
 
 This website allows you to view the events happening around you. You can also add events as an organiser.
 

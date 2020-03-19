@@ -1,0 +1,43 @@
+
+ul{
+    list-style-type:none;
+
+}
+
+li{
+    list-style-type:none;
+}
+.listyle{
+    /* box-sizing: border-box;
+    border: 2px solid; */
+    min-width: 30%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+#eventlist{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5px 5px;
+    justify-content: space-evenly;
+}
+#parentofevent{
+    text-align: center;
+}
+
+@media screen and (max-width: 900px){
+    .listyle{
+        min-width: 45%;
+    }
+    
+}
+
+@media screen and (max-width: 550px){
+    .listyle{
+        min-width: 99%;
+        text-align: center;
+    }
+    
+}

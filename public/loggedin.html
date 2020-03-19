@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            height: 100vh;
+            display: inline-block;
+            width: 33%;
+        }
+        #one{
+          background-color:green;  
+        }
+        #two{
+            background-color:orange;
+        }
+        #three{
+            background-color:pink;
+        }
+        .after-disp{
+            display: inline-block;
+        }
+        .no-disp{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="addEvent"><a>add an event</a></li>
+            <li id="logout"><a>Logout</a></li>
+        </ul>
+    </nav>
+    <div id="disp" class="no-disp">
+        <form>
+            <label for="name">Event Name:</label>
+            <input class="form-control" id="name" name="name" type="text" value="">
+            <label for="text">Event Description:</label>
+            <input class="form-control" id="text" name="text" type="text">
+            <label for="organisation">Organisation:</label>
+            <input class="form-control" id="organisation" name="organisation" type="text" value="">
+            <label for="venue">Venue:</label>
+            <input class="form-control" id="venue" name="venue" type="text" value="">
+            <label for="date">Date:</label>
+            <input class="form-control" id="date" name="date" type="date" value="">
+            <label for="starttime">Start Time:</label>
+            <input class="form-control" id="starttime" name="starttime" type="text">
+            <label for="endtime">End Time:</label>
+            <input class="form-control" id="endtime" name="endtime" type="text">
+            <button class="btn btn-primary btn-block btn-lg" type="button" id="subbut">ADD MY EVENT</button>
+        </form>
+    </div>
+    <!-- <div id="one">
+    </div><div id="two">b
+
+    </div><div id="three"> -->
+
+    </div>
+    <script src="loggedin.js"></script>
+</body>
+</html>

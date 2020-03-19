@@ -18,10 +18,10 @@ const userSchema=new mongoose.Schema({
     profilePic:{
         type:String
     },
-    messages:[
+    events:[
         {
             type:mongoose.Schema.Types.ObjectId,
-            ref:"Message"
+            ref:"Events"
         }
     ]
 })

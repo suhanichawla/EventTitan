@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
 mongoose.set("debug",true)
 mongoose.Promise=Promise;
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warbler",{
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/abc",{
     keepAlive:true,
     // useMongoClient:true
     useNewUrlParser: true,
@@ -9,4 +9,4 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/warbler",{
 })
 
 module.exports.User=require("./user")
-module.exports.Message=require("./message")
+module.exports.Event=require("./event")
